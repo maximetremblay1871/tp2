@@ -1,0 +1,252 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#conteneur1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+#conteneur {
+    grid-area: main;
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "article article aside"
+        "article article aside"
+        "article article aside";
+}
+#conteneurWow {
+    grid-area: main;
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "article article aside"
+        "article article aside"
+        "article article aside";
+        background-color: antiquewhite;
+}
+
+#header {
+    grid-area: header;
+    background-color: black;
+    height: 10vh;
+
+}
+
+#nav1 {
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#nav2 {
+
+    float: right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+#article {
+    grid-area: article;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    font-size: larger;
+    text-align: justify;
+    max-height: 80%;
+}
+
+#aside {
+    grid-area: aside;
+    background-color: lightblue;
+    padding-left: 10px;
+}
+
+#aside1 {
+    grid-area: aside;
+    background-color: beige;
+    padding-left: 10px;
+}
+
+#aside2 {
+    grid-area: aside;
+    background-color: gold;
+    padding-left: 10px;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: lightgray;
+    height: 10vh;
+}
+
+#nav1>a {
+    color: white;
+    padding-right: 30px;
+    font-weight: bold;
+    font-size: large;
+    text-decoration-line: none;
+}
+
+#nav2>a {
+    color: white;
+    text-decoration-line: none;
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.nom {
+    padding-top: 10px;
+    padding-right: 10px;
+    float: right;
+}
+
+img {
+    max-width: 350px;
+    margin: auto;
+}
+
+figure {
+    background-color: white;
+    border: solid black 1px;
+    padding: 10px;
+    width: fit-content;
+    float: left;
+}
+
+figcaption {
+    font-size: medium;
+    font-style: italic;
+}
+
+p {
+    line-height: 1.5;
+    ;
+}
+
+.texte {
+    padding-top: 30px;
+}
+
+aside>p {
+    padding-right: 10px;
+    text-align: justify;
+    font-size: large;
+}
+
+.source {
+    padding-left: 10px;
+    padding-top: 10px;   
+}
+.source>a{
+    text-decoration-line: none;
+    color: black;
+}
+
+li {
+    padding-bottom: 20px;
+    font-size: large;
+    text-align: justify;
+    padding-right: 10px;
+}
+
+.roi {
+    
+    padding: 35px;
+    width: 250px;
+    height: 300px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.overlay {
+    position: absolute;
+    font-weight: bold;
+    font-size: large;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-image: linear-gradient(to bottom right, gold, brown);
+    padding: 35px;
+
+}
+
+.txt {
+    color: white;
+    font-size: large;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, 50%);
+    text-align: justify;
+    font-family: papyrus;
+}
+
+.galerie {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.galerie:hover .overlay {
+    opacity: 1;
+}
+
+#laGalerie {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+}
+
+#main {
+    grid-area: main;
+    background-image: url(../images/fleur.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.France {
+    font-size: xx-large;
+    font-weight: bolder;
+    padding: 10px;
+    font-family: papyrus;
+}
+a:hover{
+    color: blue;
+}
+#nav1 a:hover{
+    color: blue;
+}
+#nav2 a:hover{
+    color: blue;
+}
